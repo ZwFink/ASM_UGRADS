@@ -36,7 +36,7 @@
 % Title
 % ====================
 
-\title{Panviral Pepseq: A Highly Multiplexed Serological Diagnostic }
+\title{Panviral Pepseq: A Highly Multiplexed Serological Diagnostic}
 
 \author{Zane Fink\inst{1} \and Jason Ladner\inst{1}}
 
@@ -54,7 +54,7 @@
 
 \begin{column}{\colwidth}
 
-  \begin{alertblock}{Abstract}
+  \begin{block}{Abstract}
 
 Viruses represent a diverse and ubiquitous challenge to the immune system, and a record of these encounters is preserved within our antibody responses. 
 Understanding the diverse antiviral immune response has important implications for both epidemiology and immunology, 
@@ -68,48 +68,39 @@ Using these algorithms, we were able to cover an equal amount of peptide diversi
 By increasing the efficiency of design algorithms, we are able to cover more viral diversity within a single assay, 
 greatly increasing the sensitivity of a single assay.
 
-  \end{block}
+\end{block}
 
-  \begin{block}{A block containing a list}
 
-    Nam vulputate nunc felis, non condimentum lacus porta ultrices. Nullam sed
-    sagittis metus. Etiam consectetur gravida urna quis suscipit.
+\begin{alertblock}{Objectives}
+  \begin{itemize}
+  \item \textbf{Design} an oligo library for Ab-PepSeq that broadly
+    covers viruses that infect humans/mammals.
+  \item \textbf{Create} algorithms for the efficient coverage of
+    \emph{linear epitopes} (i.e., in as few oligos as possible).
+  \item \textbf{Implement} these algorithms in an open source
+    easy-to-use software package that is freely available for public use.
+  \end{itemize}
+\end{alertblock}
+  % \begin{block}{Hypothesis}
+  %   \begin{itemize}
+  %   \item By treating the design of an oligonucleotide library as an instance
+  %         of the weighted set cover problem, we can cover a grater range of epitope diversity
+  %         in a smaller set of designed oligos.
+  %   \end{itemize}
 
+  % \end{block}
+  \begin{block}{Background: What is PepSeq?}
+    \begin{figure}
+      \includegraphics[width=0.5\colwidth]{figures/Overview.jpeg}
+      \label{fig:library}
+    \end{figure}
     \begin{itemize}
-      \item \textbf{Mauris tempor} risus nulla, sed ornare
-      \item \textbf{Libero tincidunt} a duis congue vitae
-      \item \textbf{Dui ac pretium} morbi justo neque, ullamcorper
+    \item Synthesize $100,000$s of DNA oligos that represent a diverse set of viral proteins.
+    \item Serum antibodies used to enrich for recognized peptides
+    \item Next-Generation Sequencing used for bulk characterization of enriched peptides.
+
     \end{itemize}
-
-    Eget augue porta, bibendum venenatis tortor.
-
   \end{block}
-
-  \begin{alertblock}{A highlighted block}
-
-    This block catches your eye, so \textbf{important stuff} should probably go
-    here.
-
-    Curabitur eu libero vehicula, cursus est fringilla, luctus est. Morbi
-    consectetur mauris quam, at finibus elit auctor ac. Aliquam erat volutpat.
-    Aenean at nisl ut ex ullamcorper eleifend et eu augue. Aenean quis velit
-    tristique odio convallis ultrices a ac odio.
-
-    \begin{itemize}
-      \item \textbf{Fusce dapibus tellus} vel tellus semper finibus. In
-        consequat, nibh sed mattis luctus, augue diam fermentum lectus.
-      \item \textbf{In euismod erat metus} non ex. Vestibulum luctus augue in
-        mi condimentum, at sollicitudin lorem viverra.
-      \item \textbf{Suspendisse vulputate} mauris vel placerat consectetur.
-        Mauris semper, purus ac hendrerit molestie, elit mi dignissim odio, in
-        suscipit felis sapien vel ex.
-    \end{itemize}
-
-    Aenean tincidunt risus eros, at gravida lorem sagittis vel. Vestibulum ante
-    ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
-
-  \end{alertblock}
-
 \end{column}
 
 \separatorcolumn
