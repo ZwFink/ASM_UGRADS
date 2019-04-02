@@ -91,13 +91,14 @@ greatly increasing the sensitivity of a single assay.
   % \end{block}
   \begin{block}{Background: What is PepSeq?}
     \begin{figure}
-      \includegraphics[width=0.5\colwidth]{figures/Overview.jpeg}
+      \includegraphics[width=0.6\colwidth]{figures/Overview.jpeg}
       \label{fig:library}
     \end{figure}
     \begin{itemize}
     \item Synthesize $100,000$s of DNA oligos that represent a diverse set of viral proteins.
     \item Serum antibodies used to enrich for recognized peptides
     \item Next-Generation Sequencing used for bulk characterization of enriched peptides.
+    \item In this work we focus on the first step: \emph{Design in Silico}.
 
     \end{itemize}
   \end{block}
@@ -107,26 +108,28 @@ greatly increasing the sensitivity of a single assay.
 
 \begin{column}{\colwidth}
 
-  \begin{block}{A block containing an enumerated list}
-
-    Vivamus congue volutpat elit non semper. Praesent molestie nec erat ac
-    interdum. In quis suscipit erat. \textbf{Phasellus mauris felis, molestie
-    ac pharetra quis}, tempus nec ante. Donec finibus ante vel purus mollis
-    fermentum. Sed felis mi, pharetra eget nibh a, feugiat eleifend dolor. Nam
-    mollis condimentum purus quis sodales. Nullam eu felis eu nulla eleifend
-    bibendum nec eu lorem. Vivamus felis velit, volutpat ut facilisis ac,
-    commodo in metus.
-
-    \begin{enumerate}
-      \item \textbf{Morbi mauris purus}, egestas at vehicula et, convallis
-        accumsan orci. Orci varius natoque penatibus et magnis dis parturient
-        montes, nascetur ridiculus mus.
-      \item \textbf{Cras vehicula blandit urna ut maximus}. Aliquam blandit nec
-        massa ac sollicitudin. Curabitur cursus, metus nec imperdiet bibendum,
-        velit lectus faucibus dolor, quis gravida metus mauris gravida turpis.
-      \item \textbf{Vestibulum et massa diam}. Phasellus fermentum augue non
-        nulla accumsan, non rhoncus lectus condimentum.
-    \end{enumerate}
+  \begin{block}{Large Datasets Need to Be Clustered to Ensure Reasonable Runtime}
+    \begin{figure}
+      \includegraphics[width=0.5\colwidth]{figures/runtime.pdf}
+      \caption{Runtime grows exponentially with respect to input size}
+      \label{fig:runtime}
+    \end{figure}
+    \begin{figure}
+      \includegraphics[width=0.5\colwidth]{figures/clustering.png}
+      \caption{Visual Depiction of Clustering Process}
+      \label{fig:clustering}
+    \end{figure}
+    \begin{itemize}
+    \item Input data of $>1,000,000$ viral proteins is too large to run all at once in a reasonable amount of time,
+      so clustering is used to break data down into more manageable pieces.
+    \item Two Stages of clustering: 
+      \begin{itemize}
+      \item Taxonomic-Based: Few oligos shared between families,
+        clustering by family doesn't result in loss of sensitivity
+      \item Kmer-Based: Clustering by kmers creates clusters of similar sequences,
+        good for our approach.
+      \end{itemize}
+    \end{itemize}
 
   \end{block}
 
