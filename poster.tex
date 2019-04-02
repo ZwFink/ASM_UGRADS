@@ -54,25 +54,19 @@
 
 \begin{column}{\colwidth}
 
-  \begin{block}{A block title}
+  \begin{alertblock}{Abstract}
 
-    Some block contents, followed by a diagram, followed by a dummy paragraph.
-
-    \begin{figure}
-      \centering
-      \begin{tikzpicture}[scale=6]
-        \draw[step=0.25cm,color=gray] (-1,-1) grid (1,1);
-        \draw (1,0) -- (0.2,0.2) -- (0,1) -- (-0.2,0.2) -- (-1,0)
-          -- (-0.2,-0.2) -- (0,-1) -- (0.2,-0.2) -- cycle;
-      \end{tikzpicture}
-      \caption{A figure caption.}
-    \end{figure}
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultricies
-    eget libero ac ullamcorper. Integer et euismod ante. Aenean vestibulum
-    lobortis augue, ut lobortis turpis rhoncus sed. Proin feugiat nibh a
-    lacinia dignissim. Proin scelerisque, risus eget tempor fermentum, ex
-    turpis condimentum urna, quis malesuada sapien arcu eu purus.
+Viruses represent a diverse and ubiquitous challenge to the immune system, and a record of these encounters is preserved within our antibody responses. 
+Understanding the diverse antiviral immune response has important implications for both epidemiology and immunology, 
+but our capacity for characterizing this response has been historically limited due to the low throughput nature of the available assays. 
+To circumvent these limitations, we are developing a high-throughput approach for serological characterization that begins with a custom set of oligonucleotides (oligos),
+which are ultimately linked to the peptides they encode, in order to allow for direct interaction with serum antibodies.
+To aid in the design of these oligos, we have developed algorithms to optimize coverage of a given set of viral proteins using fewer oligos than current algorithms.
+By treating the design of these libraries as an instance of the weighted set cover problem, 
+we can iteratively select the oligos that best represent the potential epitopes within a given reference set. 
+Using these algorithms, we were able to cover an equal amount of peptide diversity with $20\%$ fewer oligos. 
+By increasing the efficiency of design algorithms, we are able to cover more viral diversity within a single assay, 
+greatly increasing the sensitivity of a single assay.
 
   \end{block}
 
