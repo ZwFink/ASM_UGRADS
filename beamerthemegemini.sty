@@ -94,14 +94,21 @@
 \setbeamertemplate{headline}
 {
   \begin{beamercolorbox}{headline}
-    \begin{columns}
-      \begin{column}{\paperwidth}
+    \begin{columns}[c]
+      \begin{column}{.2\paperwidth}
+        \hskip8cm
+        \includegraphics[width=0.5\textwidth]{figures/PMI-r}
+      \end{column}
+      \begin{column}{.6\paperwidth}
         \usebeamerfont{headline}
         \vskip3ex
         \centering
         {\usebeamerfont{headline title}\usebeamercolor[fg]{headline title}\inserttitle\\[0.5ex]}
         {\usebeamerfont{headline author}\usebeamercolor[fg]{headline author}\insertauthor\\[1ex]}
         {\usebeamerfont{headline institute}\usebeamercolor[fg]{headline institute}\insertinstitute\\[1ex]}
+      \end{column}
+      \begin{column}{.2\paperwidth}
+        \hskip7cm
       \end{column}
     \end{columns}
     \vspace{5ex}
