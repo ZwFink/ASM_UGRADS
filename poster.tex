@@ -153,10 +153,26 @@ greatly increasing the sensitivity of a single assay.
 
 
 \end{block}
+
+\begin{block}{Another Approach: Naive Alignment-Based Sliding Window}
+  We describe the sliding window approach as follows.
+  Let $S$ be a set of aligned viral protein sequences, and let $k$ be the window size and $j$ the step size.
+  Then, the number $n_k$ of $k$-length subsequences of a sequence $s$ of length $p$ with step $j$ is $n_k = \lceil(p - k + 1 )/j\rceil$.
+  We define $A = \{ s_{t\times k }s_{t\times k + j}, 0 \leq t < n_k$, for all $s \in S \}$, the set of subsequences of each sequence
+  $s\in S$, where each subsequence is a $k$-mer with a step of $j$.
+
+  \begin{figure}
+    \includegraphics[width=0.5\colwidth]{figures/sliding_window.png}
+    \label{fig:sliding_window}
+  \end{figure}
+\end{block}
+\begin{itemize}
+\item In the naive approach, any oligos with gaps are immediately discarded. This results in a
+      great reduction of epitope coverage.
+\end{itemize}
 \end{column}
 
 \separatorcolumn
-
 
 \begin{column}{\colwidth}
   \begin{block}{Results}
