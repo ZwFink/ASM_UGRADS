@@ -149,6 +149,7 @@ greatly increasing the sensitivity of a single assay.
       \item Here we consider our Universe the set of $10$-mer linear epitopes in a set of viral proteins.
       \item We try to cover these epitopes using as few $19$-mer oligos as possible.
       \item Note that a single $19$-mer can cover up to $10$ unique $10$-mer linear epitopes.
+      \item Polynomial time greedy algorithm results in long runtimes for larger datasets.
     \end{itemize}
 
 
@@ -183,6 +184,17 @@ greatly increasing the sensitivity of a single assay.
 
 \begin{column}{\colwidth}
 
+  \begin{block}{Another Approach: Gap-Spanning Alignment-Based Sliding Window}
+    \begin{figure}
+      \includegraphics[width=0.8\colwidth]{figures/gap_spanning.png}
+    \end{figure}
+
+    \begin{itemize}
+    \item Similar to \emph{Naive Alignment-Based Sliding Window}, instead of discarding oligos with gaps,
+          we span the gaps and keep the amino acids on either side of a gap.
+      \item Results in far greater coverage than the \emph{Naive} approach but far more oligos that \emph{Set Cover}.
+    \end{itemize}
+  \end{block}
 
   \begin{block}{Results}
     \begin{minipage}[t]{0.5\colwidth}
@@ -193,7 +205,22 @@ greatly increasing the sensitivity of a single assay.
     \end{minipage}
   \end{block}
 
+  \begin{block}{Conclusion}
+    \begin{itemize}
+    \item \emph{Set Cover} results in coverage of $4.15\%$ more $10$-mer epitopes coverage than \emph{SW-Align w/ GapSpan}, and
+           coverage of $21.22\%$ more $10$-mer epitopes than \emph{SW-Align}.
+         \item \emph{Set Cover} covers $99.98\%$ of oligos in $841,993$ epitopes, while \emph{SW-Align w/ GapSpan} covers $95.83\%$ of epitopes in
+           $20.6\%$ more oligos than \emph{Set Cover}.
+    \end{itemize}
 
+    \begin{block}{Next Steps}
+      \begin{itemize}
+      \item The designed peptide pool can now go through the process of being encoded as nucleotide sequences.
+      \item These oligonucleotides will be synthesized and used to create a Peptide DNA Library, which
+            will be used for probing for antiviral antibody immunological response in sera. 
+      \end{itemize}
+    \end{block}
+  \end{block}
 \end{column}
 
 \separatorcolumn
