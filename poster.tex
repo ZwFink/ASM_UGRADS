@@ -161,20 +161,29 @@ greatly increasing the sensitivity of a single assay.
   We define $A = \{ s_{t\times k }s_{t\times k + j}, 0 \leq t < n_k$, for all $s \in S \}$, the set of subsequences of each sequence
   $s\in S$, where each subsequence is a $k$-mer with a step of $j$.
 
-  \begin{figure}
-    \includegraphics[width=0.5\colwidth]{figures/sliding_window.png}
-    \label{fig:sliding_window}
-  \end{figure}
-\end{block}
-\begin{itemize}
-\item In the naive approach, any oligos with gaps are immediately discarded. This results in a
+  \vskip1ex
+  \noindent
+  \begin{minipage}{0.7\colwidth}
+    \includegraphics[height=12\baselineskip]{figures/sliding_window.png}
+  \end{minipage}%
+  \begin{minipage}{0.3\colwidth}
+    \begin{itemize}
+    \item In the naive approach, any oligos with gaps are immediately discarded. This results in a
       great reduction of epitope coverage.
-\end{itemize}
+    \item Once the alignment has been completed, runtime of this approach is very low. However, aligning
+      large datasets can be very time consuming.
+    \end{itemize}
+  \end{minipage}
+
+\end{block}
+
 \end{column}
 
 \separatorcolumn
 
 \begin{column}{\colwidth}
+
+
   \begin{block}{Results}
     \begin{minipage}[t]{0.5\colwidth}
         \includegraphics[width=0.5\colwidth,height=15\baselineskip]{figures/total_num_oligos.png}
