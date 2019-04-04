@@ -115,15 +115,16 @@ greatly increasing the sensitivity of a single assay.
   Consider a set $\mathcal{U}$ of elements, and a set $S$ of $k$ sets, where
   $\bigcup_{1 \leq i \leq k}S_i = \mathcal{U}$. We seek to cover the elements of $\mathcal{U}$ in as few
   sets of $S$ as possible.
-    \begin{figure}
-      \includegraphics[width=0.5\colwidth]{figures/set_cover.png}
-      \label{fig:library}
-      \caption{The Set Cover Problem}
-    \end{figure}
-    \begin{itemize}
+  \vskip3ex
+    \begin{minipage}[b]{0.5\colwidth}
+      \includegraphics[height=8\baselineskip]{figures/set_cover.png}
+    \end{minipage}%
+    \begin{minipage}[b]{0.5\colwidth}%
+    \begin{itemize}%
       \item How we do cover all of the elements (black dots) of the above in as few sets as possible?
       \item \textbf{Greedy Algorithm}: Choose the largest set of uncovered items, the items in this set are now considered \emph{covered} and are no longer considered.
-    \end{itemize}
+    \end{itemize}%
+    \end{minipage}
 \end{block}
 
 \begin{block}{The Set Cover Problem As Applied to PepSeq}
