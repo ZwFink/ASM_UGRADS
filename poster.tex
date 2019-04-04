@@ -14,6 +14,7 @@
 \usecolortheme{gemini}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{subfigure}
 \usepackage{tikz}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -115,7 +116,7 @@ greatly increasing the sensitivity of a single assay.
   $\bigcup_{i \in k}S_i = \mathcal{U}$. We seek to cover the elements of $\mathcal{U}$ in as few
   sets of $S$ as possible.
     \begin{figure}
-      \includegraphics[width=0.6\colwidth]{figures/set_cover.png}
+      \includegraphics[width=0.5\colwidth]{figures/set_cover.png}
       \label{fig:library}
       \caption{The Set Cover Problem}
     \end{figure}
@@ -127,17 +128,24 @@ greatly increasing the sensitivity of a single assay.
 
 \begin{block}{The Set Cover Problem As Applied to PepSeq}
     \begin{figure}
-      \includegraphics[width=0.6\colwidth]{figures/set_cover_oligo.png}
+      \includegraphics[width=0.7\colwidth]{figures/set_cover_oligo.png}
       \label{fig:library}
       % \caption{}
     \end{figure}
     \begin{itemize}
-      \item Here we consider our Universe the set of $9$-mer linear epitopes in a set of viral proteins.
+      \item Here we consider our Universe the set of $10$-mer linear epitopes in a set of viral proteins.
       \item We try to cover these epitopes using as few $19$-mer oligos as possible.
+      \item Note that a single $19$-mer can cover up to $10$ unique $10$-mer linear epitopes.
     \end{itemize}
 
 
 \end{block}
+  \begin{block}{References}
+
+    \nocite{*}
+    \footnotesize{\bibliographystyle{plain}\bibliography{poster}}
+
+  \end{block}
 
 \end{column}
 
@@ -147,7 +155,7 @@ greatly increasing the sensitivity of a single assay.
 \begin{column}{\colwidth}
   \begin{block}{Large Datasets Need to Be Clustered to Ensure Reasonable Runtime}
     \begin{figure}
-      \includegraphics[width=0.6\colwidth]{figures/clustering.png}
+      \includegraphics[width=0.5\colwidth]{figures/clustering.png}
       \caption{Visual Depiction of Clustering Process}
       \label{fig:clustering}
     \end{figure}
@@ -163,13 +171,22 @@ greatly increasing the sensitivity of a single assay.
 
   \end{block}
 
+  \begin{block}{Results}
 
-  \begin{block}{References}
-
-    \nocite{*}
-    \footnotesize{\bibliographystyle{plain}\bibliography{poster}}
+    \begin{figure}
+      \subfigure[Design Algorithm vs. Total Number of Oligos] {%
+        \label{fig:total_oligos}
+        \includegraphics[width=0.55\colwidth]{figures/total_num_oligos.png}
+        }
+        \qquad
+        \subfigure[Design Algorithm vs. Percent Coverage of $10$-mer Epitopes]{
+          \label{fig:percent_coverage}
+        \includegraphics[width=0.55\colwidth]{figures/percent_ref_epis.png}
+        }
+    \end{figure}
 
   \end{block}
+
 
 \end{column}
 
