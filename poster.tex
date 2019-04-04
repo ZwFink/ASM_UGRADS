@@ -103,6 +103,17 @@ greatly increasing the sensitivity of a single assay.
 
     \end{itemize}
   \end{block}
+
+  \begin{block}{Who Cares? And Why You Should}
+    \begin{itemize}
+      \item This technology will have broad
+            implications for the fields of infectious disease epidemiology, health equity and immunology, by providing a
+            much broader view of the immunological response to infectious agents than was previously possible.
+          \item  Due to the massive and rapidly evolving human virome,
+            we need efficient algorithms to cover an incredibly diverse set of potential viral epitopes.
+
+    \end{itemize}
+  \end{block}
 \end{column}
 
 \separatorcolumn
@@ -116,10 +127,11 @@ greatly increasing the sensitivity of a single assay.
   $\bigcup_{1 \leq i \leq k}S_i = \mathcal{U}$. We seek to cover the elements of $\mathcal{U}$ in as few
   sets of $S$ as possible.
   \vskip3ex
-    \begin{minipage}[b]{0.5\colwidth}
+  \noindent
+    \begin{minipage}{0.5\colwidth}
       \includegraphics[height=8\baselineskip]{figures/set_cover.png}
     \end{minipage}%
-    \begin{minipage}[b]{0.5\colwidth}%
+    \begin{minipage}{0.5\colwidth}%
     \begin{itemize}%
       \item How we do cover all of the elements (black dots) of the above in as few sets as possible?
       \item \textbf{Greedy Algorithm}: Choose the largest set of uncovered items, the items in this set are now considered \emph{covered} and are no longer considered.
