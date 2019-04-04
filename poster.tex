@@ -121,20 +121,28 @@ greatly increasing the sensitivity of a single assay.
     \end{figure}
     \begin{itemize}
       \item How we do cover all of the elements (black dots) of the above in as few sets as possible?
+      \item \textbf{Greedy Algorithm}: Choose the largest set of uncovered items, the items in this set are now considered \emph{covered} and are no longer considered.
     \end{itemize}
+\end{block}
+
+\begin{block}{The Set Cover Problem As Applied to PepSeq}
     \begin{figure}
-      \includegraphics[width=0.6\colwidth]{figures/greedy.png}
-      \caption{A greedy algorithm}
-    \label{fig:library}
+      \includegraphics[width=0.6\colwidth]{figures/set_cover_oligo.png}
+      \label{fig:library}
+      % \caption{}
     \end{figure}
     \begin{itemize}
-      \item Choose the largest set of uncovered items, the items in this set are now considered \emph{covered} and are no longer considered.
+      \item Here we consider our Universe the set of $9$-mer linear epitopes in a set of viral proteins.
+      \item We try to cover these epitopes using as few $19$-mer oligos as possible.
     \end{itemize}
+
+
 \end{block}
 
 \end{column}
 
 \separatorcolumn
+
 
 \begin{column}{\colwidth}
   \begin{block}{Large Datasets Need to Be Clustered to Ensure Reasonable Runtime}
@@ -154,6 +162,7 @@ greatly increasing the sensitivity of a single assay.
     \end{itemize}
 
   \end{block}
+
 
   \begin{block}{References}
 
