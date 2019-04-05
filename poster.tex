@@ -123,7 +123,7 @@ greatly increasing the sensitivity of a single assay.
 \begin{column}{\colwidth}
 
 \begin{block}{The Set Cover Problem}
-  Consider a set $\mathcal{U}$ of elements, and a set $S$ of $k$ sets, where
+  Consider a finite set $\mathcal{U}$ of elements, and a set $S$ of $k$ sets, where
   $\bigcup_{1 \leq i \leq k}S_i = \mathcal{U}$. We seek to cover the elements of $\mathcal{U}$ in as few
   sets of $S$ as possible.
   \vskip3ex
@@ -157,7 +157,7 @@ greatly increasing the sensitivity of a single assay.
 
 \begin{block}{Another Approach: Naive Alignment-Based Sliding Window}
   We describe the sliding window approach as follows.
-  Let $S$ be a set of aligned viral protein sequences, and let $k$ be the window size and $j$ the step size.
+  Let $S$ be a set of aligned viral protein sequences, and let $k$ be the window size and $j$ the step size, where $1\leq j < k$.
   Then, the number $n_k$ of $k$-length subsequences of a sequence $s$ of length $p$ with step $j$ is $n_k = \lceil(p - k + 1 )/j\rceil$.
   We define $A = \{ s_{t\cdot k }s_{t\cdot k + j}, 0 \leq t < n_k$, for all $s \in S \}$, the set of subsequences of each sequence
   $s\in S$, where each subsequence is a $k$-mer with a step of $j$.
@@ -207,8 +207,8 @@ greatly increasing the sensitivity of a single assay.
 
   \begin{block}{Conclusion}
     \begin{itemize}
-    \item \emph{Set Cover} results in coverage of $4.15\%$ more $10$-mer epitopes coverage than \emph{SW-Align w/ GapSpan}, and
-           coverage of $21.22\%$ more $10$-mer epitopes than \emph{SW-Align}.
+    \item \emph{Set Cover} results in coverage of $4.15\%$ more $10$-mer epitopes than \emph{SW-Align w/ GapSpan}, and
+           $21.22\%$ more $10$-mer epitopes than \emph{SW-Align}.
          \item \emph{Set Cover} covers $99.98\%$ of oligos in $841,993$ epitopes, while \emph{SW-Align w/ GapSpan} covers $95.83\%$ of epitopes in
            $20.6\%$ more oligos than \emph{Set Cover}.
     \end{itemize}
