@@ -126,6 +126,9 @@ greatly increasing the sensitivity of a single assay.
   % Consider a finite set $\mathcal{U}$ of elements, and a set $S$ of $k$ sets, where
   % $\bigcup_{1 \leq i \leq k}S_i = \mathcal{U}$. We seek to cover the elements of $\mathcal{U}$ in as few
   % sets of $S$ as possible.
+
+  Given some elements, and a number of sets, each containing some of these elements, what is the fewest number of sets that can be used to \emph{cover} these elements?
+  Here inclusion of a set means that its elements are covered.
   \vskip3ex
   \noindent
     \begin{minipage}{0.5\colwidth}
@@ -162,6 +165,9 @@ greatly increasing the sensitivity of a single assay.
   % We define $A = \{ s_{t\cdot k }s_{t\cdot k + j}, 0 \leq t < n_k$, for all $s \in S \}$, the set of subsequences of each sequence
   % $s\in S$, where each subsequence is a $k$-mer with a step of $j$.
 
+  Given aligned sequences, we step along each grabbing a \emph{window size} ($19$ in this case) number of amino acids at a time,
+  moving over \emph{step size} ($10$ in this case) amino acids after each iteration. In this way we are able to grab the unique oligos
+  from each aligned sequence.
   \vskip1ex
   \noindent
   \begin{minipage}{0.7\colwidth}
